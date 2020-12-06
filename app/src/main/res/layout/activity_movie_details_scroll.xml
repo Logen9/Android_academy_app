@@ -87,7 +87,7 @@
             android:text="@string/_125_reviews"
             android:textColor="@color/text_color_basic"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@id/rating_icon5"
+            app:layout_constraintStart_toEndOf="@id/rating_bar"
             app:layout_constraintTop_toBottomOf="@id/movie_genre" />
 
         <TextView
@@ -128,56 +128,15 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/movie_storyline_text" />
 
-        <ImageView
-            android:id="@+id/rating_icon1"
-            android:layout_width="12sp"
-            android:layout_height="12sp"
+        <RatingBar
+            android:id="@+id/rating_bar"
+            style="@style/movieRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="13dp"
             android:layout_marginTop="8dp"
-            android:contentDescription="@string/rating_icon"
-            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            android:rating="4.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/movie_genre"
-            app:srcCompat="@drawable/star_icon" />
-
-        <ImageView
-            android:id="@+id/rating_icon2"
-            android:layout_width="12sp"
-            android:layout_height="12sp"
-            android:layout_marginTop="8dp"
-            android:contentDescription="@string/rating_icon"
-            app:layout_constraintStart_toEndOf="@+id/rating_icon1"
-            app:layout_constraintTop_toBottomOf="@id/movie_genre"
-            app:srcCompat="@drawable/star_icon" />
-
-        <ImageView
-            android:id="@+id/rating_icon3"
-            android:layout_width="12sp"
-            android:layout_height="12sp"
-            android:layout_marginTop="8dp"
-            android:contentDescription="@string/rating_icon"
-            app:layout_constraintStart_toEndOf="@+id/rating_icon2"
-            app:layout_constraintTop_toBottomOf="@id/movie_genre"
-            app:srcCompat="@drawable/star_icon" />
-
-        <ImageView
-            android:id="@+id/rating_icon4"
-            android:layout_width="12sp"
-            android:layout_height="12sp"
-            android:layout_marginTop="8dp"
-            android:contentDescription="@string/rating_icon"
-            app:layout_constraintStart_toEndOf="@+id/rating_icon3"
-            app:layout_constraintTop_toBottomOf="@id/movie_genre"
-            app:srcCompat="@drawable/star_icon" />
-
-        <ImageView
-            android:id="@+id/rating_icon5"
-            android:layout_width="12sp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:contentDescription="@string/rating_icon"
-            app:layout_constraintStart_toEndOf="@+id/rating_icon4"
-            app:layout_constraintTop_toBottomOf="@id/movie_genre"
-            app:srcCompat="@drawable/star_icon_unset" />
+            app:layout_constraintTop_toBottomOf="@id/movie_genre" />
 
         <ImageView
             android:id="@+id/Actor1"
@@ -224,64 +183,40 @@
 
         <TextView
             android:id="@+id/Actor_name_1"
-            android:layout_width="80dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:layout_marginEnd="8dp"
-            android:gravity="center_vertical"
-            android:lineSpacingExtra="2sp"
+            style="@style/actorNameText"
             android:text="@string/robert_downey_jr"
-            android:textColor="@color/text_color_actor_name"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@id/Actor_name_2"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/Actor1"
             app:lineHeight="16sp" />
 
         <TextView
             android:id="@+id/Actor_name_2"
-            android:layout_width="80dp"
-            android:layout_height="wrap_content"
+            style="@style/actorNameText"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="6dp"
-            android:gravity="center_vertical"
-            android:lineSpacingExtra="2sp"
             android:text="@string/chris_evans"
-            android:textColor="@color/text_color_actor_name"
-            android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@id/Actor_name_1"
             app:layout_constraintTop_toBottomOf="@id/Actor2"
             app:lineHeight="16sp" />
 
         <TextView
             android:id="@+id/Actor_name_3"
-            android:layout_width="80dp"
-            android:layout_height="wrap_content"
+            style="@style/actorNameText"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="6dp"
-            android:gravity="center_vertical"
-            android:lineSpacingExtra="2sp"
             android:text="@string/mark_ruffalo"
-            android:textColor="@color/text_color_actor_name"
-            android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@id/Actor_name_2"
             app:layout_constraintTop_toBottomOf="@id/Actor3"
             app:lineHeight="16sp" />
 
         <TextView
             android:id="@+id/Actor_name_4"
-            android:layout_width="80dp"
-            android:layout_height="wrap_content"
+            style="@style/actorNameText"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="6dp"
-            android:gravity="center_vertical"
-            android:lineSpacingExtra="2sp"
             android:text="@string/chris_hemsworth"
-            android:textColor="@color/text_color_actor_name"
-            android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@id/Actor_name_3"
             app:layout_constraintTop_toBottomOf="@id/Actor4"
             app:lineHeight="16sp" />
+
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
