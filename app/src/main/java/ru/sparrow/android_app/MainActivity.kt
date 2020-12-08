@@ -14,10 +14,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        findViewById<TextView>(R.id.movie_button).setOnClickListener {moveToScreen()}
+        findViewById<TextView>(R.id.movie_button).setOnClickListener {moveToDetailsScreen()}
         }
 
-    private fun moveToScreen(){
+    private fun moveToDetailsScreen(){
         startActivity(Intent(this, MovieDetailsActivity::class.java))
     }
 }
